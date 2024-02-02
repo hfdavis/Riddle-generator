@@ -55,8 +55,8 @@ form {
 .riddle {
     font-size: 20px;
     background-color: azure;
-    padding: 20px;
-    line-height: 24px;
+    padding: 50px;
+    line-height: 2;
     margin-top: 20px;
     border-radius: 20px;
 

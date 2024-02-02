@@ -1,12 +1,25 @@
-function generateRiddle(event) {
-  event.preventDefault();
-
+function displayRiddle(response) {
   new Typewriter("#riddle", {
-    strings: "I speak without a mouth and hear without ears.",
+    strings: response.data.answer,
     autoStart: true,
     delay: 1,
     cursor: "",
   });
+}
+
+function generateRiddle(event) {
+  event.preventDefault();
+
+  let instructionsInput = document.querySelector("#user-instructions");
+  let apiKey = "4cfe24t3503o158b86cbac58e0e08cf3";
+  let prompt = `generate a short riddle that is ${instructionsInput.value} difficulty and include answer.`;
+  let context =
+    "you are a clever riddle expert and love to write short riddles. your mission is to generate a riddle in basic HTML, the riddle should never be about HTML. display the riddle and answer only. make sure to follow the user instructions";
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  console.log(`prompt`);
+
+  axios.get(apiUrl).then(displayRiddle);
 }
 
 let riddleFormElement = document.querySelector("#riddle-generator-form");
