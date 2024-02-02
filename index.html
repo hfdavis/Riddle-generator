@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>AI Riddle Generator</title>
   </head>
   <body>
@@ -12,7 +13,7 @@
         <h1>Welcome To The Riddle Generator</h1>
       </header>
       <main>
-        <form>
+        <form id="riddle-generator-form">
           <input
             type="text"
             placeholder="Enter the topic of the riddle..."
@@ -23,10 +24,7 @@
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="riddle">
-          "I speak without a mouth and hear without ears. I have no body, but I
-          come alive with the wind. What am I?"
-        </div>
+        <div class="riddle" id="riddle"></div>
       </main>
     </div>
     <footer>
