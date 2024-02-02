@@ -7,19 +7,28 @@
     <title>AI Riddle Generator</title>
   </head>
   <body>
-    <header>
-      <h1>Welcome To The Riddle Generator</h1>
-    </header>
-    <main>
-      <form>
-        <input type="text" placeholder="Enter the topic of the riddle..." />
-        <input type="submit" />
-      </form>
-      <div id="riddle">
-        "I speak without a mouth and hear without ears. I have no body, but I
-        come alive with the wind. What am I?"
-      </div>
-    </main>
+    <div class="container">
+      <header>
+        <h1>Welcome To The Riddle Generator</h1>
+      </header>
+      <main>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter the topic of the riddle..."
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <div class="riddle">
+          "I speak without a mouth and hear without ears. I have no body, but I
+          come alive with the wind. What am I?"
+        </div>
+      </main>
+    </div>
     <footer>
       This AI project was coded by
       <a href="https://github.com/hfdavis" target="_blank">Holly Davis</a> and
