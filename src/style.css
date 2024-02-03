@@ -62,6 +62,10 @@ form {
 
 }
 
+.hidden {
+    display: none;
+}
+
 footer {
     text-align: center;
     font-size: 13px;
